@@ -55,3 +55,8 @@ downloading keec102.pdf to  /home/user/ncert/Class11/Economics/Indian_Economic_D
 and so on ......
 
 ```
+
+if you want to see scrapy spider log
+```shell
+scrapy shell ncert
+```
