@@ -11,6 +11,33 @@ next 5 chars (keac1) define book and next 2 numbers (03) define chapter number
 also to download index page scheme is adding 2 chars (ps) instead of chapters number
 """
 
+
+"""
+clone the repo and run the spider
+
+scrapy crawl --nolog ncert
+
+follow the prompts
+
+to download multiple books
+
+enter their no separated by comma
+
+e.g. 
+
+Select one the books:
+Enter 1 for Indian Economic Development
+Enter 2 for Statistics for Economics
+Enter 3 for Sankhyiki
+Enter 4 for Bhartiya Airthryavstha Ka Vikas 
+Enter 5 for Hindustan Ki Moaashi Tarraqqi(Urdu)
+Enter 6 for Shumariyaat Bar-e-Mushiyat(Urdu)
+
+Enter book number:      1,2
+
+
+"""
+
 url = 'https://ncert.nic.in/textbook.php/'
 common_url = "https://ncert.nic.in/textbook/pdf/"
 ext = ".pdf"
@@ -48,17 +75,20 @@ class NcertSpider(scrapy.Spider):
 			print(f"Enter {j+1} for {tbook_name}")
 
 
-		select_book = int(input(f"\nEnter book number:\t"))
-		thebook_name = op[select_book-1].xpath("text()").get()
-		thebook_name = thebook_name.replace(" ","_")
-		tbook_link = op[select_book-1].xpath("@value").get()
-		tbook_pre = tbook_link.split("=",1)[0].split("?",1)[1]
-		tbook_chapters = tbook_link.split("=",1)[1].split("-",1)[1]
-		theclass = str("Class") + str(self.tclass)
-		thesubject = self.tsubjects[self.tsubject]
-		thesubject = thesubject.replace(" ","_")
-		print(f"\nDownloading...",f"Class: {theclass}",f"Subject: {thesubject}",f"Book: {thebook_name}",f"Chapters: {tbook_chapters}",sep="\t",end="\n\n\n")
-		self.download_books(theclass, thesubject,thebook_name, tbook_pre, tbook_chapters)
+		book_prompt = input(f"\nEnter book number:\t")
+		book_list = self.to_list([str(book_prompt)])
+		for select_book in book_list:
+			thebook_name = op[select_book-1].xpath("text()").get()
+			thebook_name = thebook_name.replace(" ","_")
+			tbook_link = op[select_book-1].xpath("@value").get()
+			tbook_pre = tbook_link.split("=",1)[0].split("?",1)[1]
+			tbook_chapters = tbook_link.split("=",1)[1].split("-",1)[1]
+
+			theclass = str("Class") + str(self.tclass)
+			thesubject = self.tsubjects[self.tsubject]
+			thesubject = thesubject.replace(" ","_")
+			print(f"\nDownloading...",f"Class: {theclass}",f"Subject: {thesubject}",f"Book: {thebook_name}",f"Chapters: {tbook_chapters}",sep="\t",end="\n\n\n")
+			self.download_books(theclass, thesubject,thebook_name, tbook_pre, tbook_chapters)
 
 	def download_books(self,theclass,subject,book_name,book_code,chapters):
 		class_path = Path(ncert_folder_path, theclass)
@@ -99,3 +129,10 @@ class NcertSpider(scrapy.Spider):
 			return True
 		else:
 			return False
+
+	def to_list(self,obj_list):
+		rl = []
+		for obj in obj_list:
+			for lobj in obj.split(","):
+				rl.append(int(lobj))
+		return rl
