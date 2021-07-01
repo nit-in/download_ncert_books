@@ -52,7 +52,23 @@ downloading keec1ps.pdf to  /home/user/ncert/Class11/Economics/Indian_Economic_D
 downloading keec101.pdf to  /home/user/ncert/Class11/Economics/Indian_Economic_Development/keec101.pdf
 downloading keec102.pdf to  /home/user/ncert/Class11/Economics/Indian_Economic_Development/keec102.pdf
 
-and so on ......
+			OR 
+
+to download multiple books
+
+enter their numbers separated by commas
+
+e.g. 
+
+Select one the books:
+Enter 1 for Indian Economic Development
+Enter 2 for Statistics for Economics
+Enter 3 for Sankhyiki
+Enter 4 for Bhartiya Airthryavstha Ka Vikas 
+Enter 5 for Hindustan Ki Moaashi Tarraqqi(Urdu)
+Enter 6 for Shumariyaat Bar-e-Mushiyat(Urdu)
+
+Enter book number:      1,2
 
 ```
 
