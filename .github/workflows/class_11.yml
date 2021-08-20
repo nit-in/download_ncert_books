@@ -1,0 +1,61 @@
+name: NCERT_CLASS_11
+
+on:
+  push:
+    tags:
+      - 'class_11'
+
+  workflow_dispatch:
+
+jobs:
+
+  ncert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: setting_up
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        run:  |
+          sudo apt update
+          sudo apt install --fix-missing -y python3 wkhtmltopdf fd-find poppler-utils zip 
+          sudo ln -s $(which fdfind) /usr/bin/fd
+          sudo pip install -r requirements.txt
+
+      - name: download books
+        run:  |
+          for sub in {1..30..1}; do
+            for book in {1..30..1}; do
+              ./script.exp 11 $sub $book
+            done
+          done
+
+
+      - name: make txt files
+        run:  |
+          source .env
+          pdftxt
+
+      - name: zipup_books
+        run:  |
+          cd /home/runner/ncert/class11
+          for subject in *; do
+            zip -r $subject.zip $subject
+          done
+
+      - name: zipup_text
+        run:  |
+          cd /home/runner/ncert_text/class11
+          for subject in *; do
+            zip -r $subject_text.zip $subject
+          done
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "/home/runner/ncert/class11/*.zip, /home/runner/ncert_text/class11/*.zip"
+          token: ${{ secrets.NCERT }}
+
