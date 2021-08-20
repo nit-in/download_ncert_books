@@ -1,0 +1,48 @@
+#!/usr/bin/expect -f
+
+
+set class [lindex $argv 0]
+set sub [lindex $argv 1]
+set book [lindex $argv 2]
+
+set force_conservative 0  ;# set to 1 to force conservative mode even if
+			  ;# script wasn't run conservatively originally
+if {$force_conservative} {
+	set send_slow {1 .1}
+	proc send {ignore arg} {
+		sleep .1
+		exp_send -s -- $arg
+	}
+}
+
+
+
+set timeout -1
+spawn scrapy crawl --nolog ncert
+match_max 100000
+expect -exact "\r
+Enter the class:	"
+send -- "$class\r"
+expect -exact "$class\r
+\r
+Select one the subjects:\r
+Enter 1 for Hindi\r
+Enter 2 for English\r
+Enter 3 for Mathematics\r
+Enter 4 for Social Studies\r
+Enter 5 for Sanskrit\r
+Enter 6 for Science\r
+Enter 7 for Urdu\r
+\r
+Enter subject number:	"
+send -- "$sub\r"
+expect -exact "$sub\r
+\r
+Select one the books:\r
+Enter 1 for Mathematics\r
+Enter 2 for Ganit\r
+Enter 3 for Hisab(Urdu)\r
+\r
+Enter book number:	"
+send -- "$book\r"
+expect eof

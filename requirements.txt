@@ -1,4 +1,4 @@
-scrapy_selenium==0.0.7
-Scrapy==2.4.1
+requests==2.26.0
 itemadapter==0.2.0
-requests==2.25.1
+Scrapy==2.4.1
+scrapy_selenium==0.0.7
