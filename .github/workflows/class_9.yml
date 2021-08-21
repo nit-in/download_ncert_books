@@ -41,7 +41,7 @@ jobs:
 
       - name: zipup_books
         run:  |
-          cd /home/runner/ncert/class9
+          cd /home/runner/ncert/Class9
           for subject in *; do
             zip -r $subject.zip $subject
           done
@@ -56,6 +56,6 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "/home/runner/ncert/class9/*.zip, /home/runner/ncert_text/class9/*.zip"
+          artifacts: "/home/runner/ncert/Class9/*.zip, /home/runner/ncert_text/class9/*.zip"
           token: ${{ secrets.NCERT }}
 
