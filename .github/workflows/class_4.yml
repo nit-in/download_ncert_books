@@ -27,7 +27,7 @@ jobs:
 
       - name: download books
         run:  |
-          for sub in {1..30..1}; do
+          for sub in {1..5..1}; do
             for book in {1..30..1}; do
               ./script.exp 4 $sub $book
             done

@@ -1,9 +1,9 @@
-name: NCERT_CLASS_12
+name: NCERT_CLASS_11_12
 
 on:
   push:
     tags:
-      - 'class_12'
+      - 'class_11_12'
 
   workflow_dispatch:
 
@@ -27,9 +27,9 @@ jobs:
 
       - name: download books
         run:  |
-          for sub in {1..23..1}; do
+          for sub in {1..4..1}; do
             for book in {1..30..1}; do
-              ./script.exp 12 $sub $book
+              ./script.exp 13 $sub $book
             done
           done
 
@@ -41,14 +41,14 @@ jobs:
 
       - name: zipup_books
         run:  |
-          cd /home/runner/ncert/class12
+          cd /home/runner/ncert/class_11_12
           for subject in *; do
             zip -r $subject.zip $subject
           done
 
       - name: zipup_text
         run:  |
-          cd /home/runner/ncert_text/class12
+          cd /home/runner/ncert_text/class_11_12
           for subject in *; do
             zip -r $subject_text.zip $subject
           done
@@ -56,6 +56,6 @@ jobs:
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "/home/runner/ncert/class12/*.zip, /home/runner/ncert_text/class12/*.zip"
+          artifacts: "/home/runner/ncert/class_11_12/*.zip, /home/runner/ncert_text/class_11_12/*.zip"
           token: ${{ secrets.NCERT }}
 
