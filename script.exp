@@ -23,26 +23,10 @@ match_max 100000
 expect -exact "\r
 Enter the class:	"
 send -- "$class\r"
-expect -exact "$class\r
-\r
-Select one the subjects:\r
-Enter 1 for Hindi\r
-Enter 2 for English\r
-Enter 3 for Mathematics\r
-Enter 4 for Social Studies\r
-Enter 5 for Sanskrit\r
-Enter 6 for Science\r
-Enter 7 for Urdu\r
-\r
+expect -exact "\r
 Enter subject number:	"
 send -- "$sub\r"
-expect -exact "$sub\r
-\r
-Select one the books:\r
-Enter 1 for Mathematics\r
-Enter 2 for Ganit\r
-Enter 3 for Hisab(Urdu)\r
-\r
+expect -exact "\r
 Enter book number:	"
 send -- "$book\r"
 expect eof
