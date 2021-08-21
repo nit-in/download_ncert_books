@@ -50,7 +50,7 @@ jobs:
         run:  |
           cd /home/runner/ncert_text/Class2
           for subject in *; do
-            zip -r $subject_text.zip $subject
+            zip -r $subject"_text.zip" $subject
           done
 
       - name: Create Release
