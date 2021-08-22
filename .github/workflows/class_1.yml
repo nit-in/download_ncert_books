@@ -48,7 +48,7 @@ jobs:
             for book in $subject/*; do
               subjectname=$(basename $subject)
               bookname=$(basename $book)
-              zip -r "/home/runner/zips/NCERT_CLASS_1_$subjectname_$bookname.zip" $book
+              zip -r "/home/runner/zips/NCERT_CLASS_1_${subjectname}_${bookname}.zip" $book
             done
           done
 
@@ -56,7 +56,7 @@ jobs:
         run:  |
           cd /home/runner/ncert_text/Class1
           for subject in *; do
-            zip -r "/home/runner/zips/$subject_text.zip" $subject
+            zip -r "/home/runner/zips/${subject}_text.zip" $subject
           done
 
       - name: Create Release
