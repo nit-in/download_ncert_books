@@ -15,7 +15,17 @@ download NCERT books using scrapy
 [![NCERT_CLASS_12](https://github.com/nit-in/download_ncert_books/actions/workflows/class_12.yml/badge.svg?branch=class_12)](https://github.com/nit-in/download_ncert_books/releases/tag/class_12)
 
 
-## How to use
+## Downloading Books:
+You can either use the spider by cloning this repo and following the instructions given below<br>
+or<br>
+You can download the books direcly from the release section or by clicking on the <b>badges</b> above
+
+There are 2 different kind of zips in the release section for every class
+1. <b>Book wise</b> NCERT_CLASS_ClassNo_Subject_BookName.zip : These zips contain the Chapters of the <i>BookName</i> for the <i>Subject</i> of the <i>ClassNo</i>
+2. <b>Books Text</b> Class_ClassNo_Text.zip : These zips contain the text extracted from all the books of the <i>ClassNo</i>
+
+
+## How to use the spider
 Initial Setup
 
 ```shell
