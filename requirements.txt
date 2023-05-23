@@ -1,4 +1,4 @@
 scrapy_selenium==0.0.7
 Scrapy==2.9.0
-requests==2.30.0
+requests==2.31.0
 itemadapter==0.8.0
