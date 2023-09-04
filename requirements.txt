@@ -2,4 +2,4 @@ scrapy_selenium==0.0.7
 Scrapy==2.10.1
 requests==2.31.0
 itemadapter==0.8.0
-selenium==3.9.0
+selenium==4.12.0
