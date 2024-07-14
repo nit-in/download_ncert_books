@@ -1,3 +1,6 @@
+#TODO
+Need to remove scrapy-selenium as a requirement
+
 # download_ncert_books
 download NCERT books using scrapy
 
