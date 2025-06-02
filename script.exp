@@ -22,7 +22,7 @@ set class [lindex $argv 0]
 set sub [lindex $argv 1]
 set book [lindex $argv 2]
 
-set force_conservative 0  ;# set to 1 to force conservative mode even if
+set force_conservative 1  ;# set to 1 to force conservative mode even if
 			  ;# script wasn't run conservatively originally
 if {$force_conservative} {
 	set send_slow {1 .1}
