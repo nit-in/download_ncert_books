@@ -1,0 +1,68 @@
+name: NCERT_CLASS_2
+
+on:
+  push:
+    tags:
+      - 'class_2_2025-26'
+
+  workflow_dispatch:
+
+jobs:
+
+  ncert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: setting_up
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+        run:  |
+          sudo apt update
+          sudo apt install --fix-missing -y python3 wkhtmltopdf fd-find poppler-utils zip expect
+          sudo ln -s $(which fdfind) /usr/bin/fd
+          sudo pip install -r requirements.txt
+          source .env
+
+      - name: download books
+        run:  |
+          for sub in {1..30..1}; do
+            j=""
+            for i in {1..30..1}; do
+              j="${j},${i}"
+            done
+            ./script.exp 2 $sub ${j:1}
+          done
+
+      - name: make txt files
+        run:  |
+          source .env
+          pdftxt
+
+      - name: zipup_books
+        run:  |
+          mkdir -p /home/runner/zips
+
+          cd /home/runner
+          for subject in ncert/Class2/*; do
+            for book in $subject/*; do
+              subjectname=$(basename $subject)
+              bookname=$(basename $book)
+              zip -r "/home/runner/zips/NCERT_CLASS_2_${subjectname}_${bookname}.zip" $book
+            done
+          done
+
+      - name: zipup_text
+        run:  |
+          cd /home/runner/ncert_text/Class2
+          for subject in *; do
+            zip -r "/home/runner/zips/Class_2_Books_Text.zip" $subject
+          done
+
+      - name: Create Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "/home/runner/zips/*.zip"
+          token: ${{ secrets.NCERT }}
