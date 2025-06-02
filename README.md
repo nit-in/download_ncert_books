@@ -4,6 +4,22 @@ Need to remove scrapy-selenium as a requirement
 # download_ncert_books
 download NCERT books using scrapy
 
+## For session 2025-26
+[![NCERT_CLASS_1](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml)
+[![NCERT_CLASS_2](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml)
+[![NCERT_CLASS_3](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml)
+[![NCERT_CLASS_4](https://github.com/nit-in/download_ncert_books/actions/workflows/class_4_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_4_2025-26.yml)
+[![NCERT_CLASS_5](https://github.com/nit-in/download_ncert_books/actions/workflows/class_5_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_5_2025-26.yml)
+[![NCERT_CLASS_6](https://github.com/nit-in/download_ncert_books/actions/workflows/class_6_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_6_2025-26.yml)
+[![NCERT_CLASS_7](https://github.com/nit-in/download_ncert_books/actions/workflows/class_7_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_7_2025-26.yml)
+[![NCERT_CLASS_8](https://github.com/nit-in/download_ncert_books/actions/workflows/class_8_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_8_2025-26.yml)
+[![NCERT_CLASS_9](https://github.com/nit-in/download_ncert_books/actions/workflows/class_9_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_9_2025-26.yml)
+[![NCERT_CLASS_10](https://github.com/nit-in/download_ncert_books/actions/workflows/class_10_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_10_2025-26.yml)
+[![NCERT_CLASS_11](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_2025-26.yml)
+[![NCERT_CLASS_12](https://github.com/nit-in/download_ncert_books/actions/workflows/class_12_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_12_2025-26.yml)
+[![NCERT_CLASS_11_12](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_12_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_12_2025-26.yml)
+
+## For session 2022-23
 [![NCERT_CLASS_1](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1.yml/badge.svg?branch=class_1)](https://github.com/nit-in/download_ncert_books/releases/tag/class_1)
 [![NCERT_CLASS_2](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2.yml/badge.svg?branch=class_2)](https://github.com/nit-in/download_ncert_books/releases/tag/class_2)
 [![NCERT_CLASS_3](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3.yml/badge.svg?branch=class_3)](https://github.com/nit-in/download_ncert_books/releases/tag/class_3)
