@@ -24,6 +24,7 @@ jobs:
           sudo apt install --fix-missing -y python3 wkhtmltopdf fd-find poppler-utils zip expect
           sudo ln -s $(which fdfind) /usr/bin/fd
           sudo pip install -r requirements.txt
+          playwright install chromium
           source .env
 
       - name: download books
