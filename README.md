@@ -1,12 +1,17 @@
 #TODO ✓
-Need to remove scrapy-selenium as a requirement
-Removed scrapy-selenium
-added scrapy-playwright
+Need to remove scrapy-selenium as a requirement :Done
+
+✓ Removed scrapy-selenium
+
+✓ added scrapy-playwright
 
 # download_ncert_books
 download NCERT books using scrapy
-
+ 
 ## For session 2025-26
+### Books are now available in many other languages (like Marathi, Telugu, Gujrati etc).
+### For Class 5th and Class 8th are not yet available.
+
 [![NCERT_CLASS_1](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml)
 [![NCERT_CLASS_2](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml)
 [![NCERT_CLASS_3](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml)
