@@ -66,6 +66,7 @@ Initial Setup
 git clone https://github.com/nit-in/download_ncert_books.git
 cd download_ncert_books
 pip install -r requirements.txt
+playwright install chromium
 ```
 
 to run the spider 
