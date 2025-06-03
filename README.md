@@ -1,5 +1,7 @@
-#TODO
+#TODO ✓
 Need to remove scrapy-selenium as a requirement
+Removed scrapy-selenium
+added scrapy-playwright
 
 # download_ncert_books
 download NCERT books using scrapy
