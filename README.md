@@ -12,19 +12,19 @@ download NCERT books using scrapy
 ### Books are now available in many other languages (like Marathi, Telugu, Gujrati etc).
 ### For Class 5th and Class 8th are not yet available.
 
-[![NCERT_CLASS_1](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml)
-[![NCERT_CLASS_2](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml)
-[![NCERT_CLASS_3](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml)
-[![NCERT_CLASS_4](https://github.com/nit-in/download_ncert_books/actions/workflows/class_4_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_4_2025-26.yml)
-[![NCERT_CLASS_5](https://github.com/nit-in/download_ncert_books/actions/workflows/class_5_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_5_2025-26.yml)
-[![NCERT_CLASS_6](https://github.com/nit-in/download_ncert_books/actions/workflows/class_6_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_6_2025-26.yml)
-[![NCERT_CLASS_7](https://github.com/nit-in/download_ncert_books/actions/workflows/class_7_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_7_2025-26.yml)
-[![NCERT_CLASS_8](https://github.com/nit-in/download_ncert_books/actions/workflows/class_8_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_8_2025-26.yml)
-[![NCERT_CLASS_9](https://github.com/nit-in/download_ncert_books/actions/workflows/class_9_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_9_2025-26.yml)
-[![NCERT_CLASS_10](https://github.com/nit-in/download_ncert_books/actions/workflows/class_10_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_10_2025-26.yml)
-[![NCERT_CLASS_11](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_2025-26.yml)
-[![NCERT_CLASS_12](https://github.com/nit-in/download_ncert_books/actions/workflows/class_12_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_12_2025-26.yml)
-[![NCERT_CLASS_11_12](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_12_2025-26.yml/badge.svg)](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_12_2025-26.yml)
+[![NCERT_CLASS_1_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml/badge.svg?branch=class_1_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_1_2025-26)
+[![NCERT_CLASS_2_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_2_2025-26.yml/badge.svg?branch=class_2_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_2_2025-26)
+[![NCERT_CLASS_3_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_3_2025-26.yml/badge.svg?branch=class_3_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_3_2025-26)
+[![NCERT_CLASS_4_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_4_2025-26.yml/badge.svg?branch=class_4_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_4_2025-26)
+[![NCERT_CLASS_5_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_5_2025-26.yml/badge.svg?branch=class_5_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_5_2025-26)
+[![NCERT_CLASS_6_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_6_2025-26.yml/badge.svg?branch=class_6_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_6_2025-26)
+[![NCERT_CLASS_7_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_7_2025-26.yml/badge.svg?branch=class_7_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_7_2025-26)
+[![NCERT_CLASS_8_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_8_2025-26.yml/badge.svg?branch=class_8_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_8_2025-26)
+[![NCERT_CLASS_9_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_9_2025-26.yml/badge.svg?branch=class_9_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_9_2025-26)
+[![NCERT_CLASS_10_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_10_2025-26.yml/badge.svg?branch=class_10_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_10_2025-26)
+[![NCERT_CLASS_11_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_2025-26.yml/badge.svg?branch=class_11_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_11_2025-26)
+[![NCERT_CLASS_12_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_12_2025-26.yml/badge.svg?branch=class_12_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_12_2025-26)
+[![NCERT_CLASS_11_12_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_11_12_2025-26.yml/badge.svg?branch=class_11_12_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_11_12_2025-26)
 
 ## For session 2022-23
 [![NCERT_CLASS_1](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1.yml/badge.svg?branch=class_1)](https://github.com/nit-in/download_ncert_books/releases/tag/class_1)
