@@ -21,7 +21,7 @@ jobs:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
         run:  |
           sudo apt update
-          sudo apt install --fix-missing -y python3 wkhtmltopdf fd-find poppler-utils zip expect
+          sudo apt install --fix-missing -y python3 wkhtmltopdf fd-find poppler-utils zip expect aria2
           sudo ln -s $(which fdfind) /usr/bin/fd
           sudo pip install -r requirements.txt
           playwright install chromium

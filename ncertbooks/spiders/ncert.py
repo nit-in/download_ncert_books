@@ -122,13 +122,13 @@ class NcertSpider(scrapy.Spider):
             pdf_size = requests.head(pdf_link).headers["Content-Length"]
 
             if not self.check_file(pdf_path,pdf_size):
-                program = "wget"
-                arg1 = "--show-progress"
-                arg2 = "--server-response"
-                arg3 = "--continue"
-                arg4 = "-O"
+                program = "aria2c"
+                arg1 = "-x16"
+                arg2 = "-s16"
+                arg3 = "-d"
+                arg4 = "-o"
                 print(f"Downloading {pdf_name} to ",f"{str(pdf_path)}")
-                subprocess.run([program, arg1, arg2, arg3, str(pdf_link), arg4, str(pdf_path)], stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
+                subprocess.run([program, arg1, arg2, arg3, str(book_path), arg4, str(pdf_name), str(pdf_link)], stderr=subprocess.STDOUT)
             else:
                 print(f"Already downloaded {pdf_name} to ",f"{str(pdf_path)}")
 
