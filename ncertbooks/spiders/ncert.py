@@ -130,12 +130,12 @@ class NcertSpider(scrapy.Spider):
             else:
                 print(f"Already downloaded {pdf_name} to ",f"{str(pdf_path)}")
 
-        dtfname = str(dflname) + str(txtext)
-        dtxtfile = Path(cwd, dtfname)
+            dtfname = str(dflname) + str(txtext)
+            dtxtfile = Path(cwd, dtfname)
 
-        with open(str(dtxtfile), "w") as lfile:
-            for pl in pdf_links:
-                lfile.write(f"{str(pl)}\n")
+            with open(str(dtxtfile), "w") as lfile:
+                for pl in pdf_links:
+                    lfile.write(f"{str(pl)}\n")
 
         self.start_download(dtxtfile, book_path)
 
