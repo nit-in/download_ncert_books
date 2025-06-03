@@ -12,6 +12,8 @@ ext = ".pdf"
 ncert_folder = "~/ncert"
 ncert_folder_path = Path(ncert_folder).expanduser()
 cwd = Path.cwd()
+dflname = "dwnlnk"
+txtext = ".txt"
 
 class NcertSpider(scrapy.Spider):
     name = "ncert"
@@ -106,6 +108,7 @@ class NcertSpider(scrapy.Spider):
         if not book_path.exists():
             book_path.mkdir(parents=True)
 
+        pdf_links = []
         chap = int(chapters) + 1
         for k in range(0,chap):
             if k == 0:
@@ -122,15 +125,29 @@ class NcertSpider(scrapy.Spider):
             pdf_size = requests.head(pdf_link).headers["Content-Length"]
 
             if not self.check_file(pdf_path,pdf_size):
-                program = "aria2c"
-                arg1 = "-x16"
-                arg2 = "-s16"
-                arg3 = "-d"
-                arg4 = "-o"
-                print(f"Downloading {pdf_name} to ",f"{str(pdf_path)}")
-                subprocess.run([program, arg1, arg2, arg3, str(book_path), arg4, str(pdf_name), str(pdf_link)], stderr=subprocess.STDOUT)
+                pdf_links.append(str(pdf_link))
+                print(f"Adding {str(pdf_link)} to list")
             else:
                 print(f"Already downloaded {pdf_name} to ",f"{str(pdf_path)}")
+
+        dtfname = str(dflname) + str(txtext)
+        dtxtfile = Path(cwd, dtfname)
+
+        with open(str(dtxtfile), "w") as lfile:
+            for pl in pdf_links:
+                lfile.write(f"{str(pl)}\n")
+
+        self.start_download(dtxtfile, book_path)
+
+    def start_download(self, dlfile, book_path):
+        program = "aria2c"
+        arg1 = "-x16"
+        arg2 = "-s16"
+        arg3 = "-j16"
+        arg4 = "-d"
+        arg5 = "-i"
+        print(f"Downloading files to ",f"{str(book_path)}")
+        subprocess.run([program, arg1, arg2, arg3, arg4, str(book_path), arg5, str(dlfile)], stderr=subprocess.STDOUT)
 
     def check_file(self,pdf_path,pdf_size):
         if pdf_path.exists() and int(pdf_path.stat().st_size) == int(pdf_size):
@@ -144,3 +161,4 @@ class NcertSpider(scrapy.Spider):
             for lobj in obj.split(","):
                 rl.append(int(lobj))
         return rl
+
