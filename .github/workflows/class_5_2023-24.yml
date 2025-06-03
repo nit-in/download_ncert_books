@@ -52,6 +52,7 @@ jobs:
               subjectname=$(basename $subject)
               bookname=$(basename $book)
               zip -r "/home/runner/zips/NCERT_CLASS_5_${subjectname}_${bookname}.zip" $book
+              rm -rf $book
             done
           done
 
