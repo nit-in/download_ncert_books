@@ -141,5 +141,5 @@ Enter book number:      1,2
 
 if you want to see scrapy spider log
 ```shell
-scrapy shell ncert
+scrapy crawl ncert
 ```
