@@ -1,4 +1,4 @@
-itemadapter==0.11.0
+itemadapter==0.12.0
 Requests==2.32.4
 scrapy==2.13.3
 scrapy_playwright==0.0.43
