@@ -10,7 +10,7 @@ download NCERT books using scrapy
  
 ## For session 2025-26
 ### Books are now available in many other languages (like Marathi, Telugu, Gujrati etc).
-### For Class 5th and Class 8th are not yet available.
+~### For Class 5th and Class 8th are not yet available.~
 ### Click below to download books
 
 [![NCERT_CLASS_1_2025-26](https://github.com/nit-in/download_ncert_books/actions/workflows/class_1_2025-26.yml/badge.svg?branch=class_1_2025-26)](https://github.com/nit-in/download_ncert_books/releases/tag/class_1_2025-26)
